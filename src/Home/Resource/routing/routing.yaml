@@ -1,0 +1,8 @@
+routes:
+  crm_home:
+    path: /abc
+    methods:
+      - GET
+    options:
+      action: index
+      controller: 'MicroCRM\Home\Controller\HomeController'

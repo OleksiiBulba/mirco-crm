@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 define('BD', realpath(__DIR__ . '/../'));
 
-require 'vendor/autoload.php';
+require BD . '/vendor/autoload.php';
 
 if(php_sapi_name() !== 'cli') {
     // Allow from any origin
