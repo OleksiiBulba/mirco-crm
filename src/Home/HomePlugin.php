@@ -3,15 +3,18 @@
 namespace MicroCRM\Home;
 
 use Micro\Component\DependencyInjection\Container;
-use Micro\Framework\Kernel\Configuration\PluginConfigurationInterface;
 use Micro\Framework\Kernel\Plugin\ConfigurableInterface;
 use Micro\Framework\Kernel\Plugin\DependencyProviderInterface;
+use Micro\Framework\Kernel\Plugin\PluginConfigurationTrait;
 use MicroCRM\Home\Facade\HomeFacade;
 use MicroCRM\Home\Facade\HomeFacadeInterface;
 
+/**
+ * @method HomePluginConfiguration configuration()
+ */
 class HomePlugin implements DependencyProviderInterface, ConfigurableInterface
 {
-    private readonly PluginConfigurationInterface $configuration;
+    use PluginConfigurationTrait;
 
     /**
      * {@inheritDoc}
@@ -26,21 +29,5 @@ class HomePlugin implements DependencyProviderInterface, ConfigurableInterface
     protected function createFacade(): HomeFacadeInterface
     {
         return new HomeFacade($this->configuration());
-    }
-
-    /**
-     * @return HomePluginConfiguration
-     */
-    public function configuration(): PluginConfigurationInterface
-    {
-        return $this->configuration;
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setConfiguration(PluginConfigurationInterface $pluginConfiguration): void
-    {
-        $this->configuration = $pluginConfiguration;
     }
 }
