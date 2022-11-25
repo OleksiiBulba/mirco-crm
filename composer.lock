@@ -318,16 +318,16 @@
         },
         {
             "name": "micro/kernel-boot-configuration",
-            "version": "1.2",
+            "version": "1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Micro-PHP/kernel-bootloader-configuration.git",
-                "reference": "c043ba4b569805f2d81c32704b28986d04fd9983"
+                "reference": "2b4ee41cc59a9d9d1a5193ab0bcf0a031e5436c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Micro-PHP/kernel-bootloader-configuration/zipball/c043ba4b569805f2d81c32704b28986d04fd9983",
-                "reference": "c043ba4b569805f2d81c32704b28986d04fd9983",
+                "url": "https://api.github.com/repos/Micro-PHP/kernel-bootloader-configuration/zipball/2b4ee41cc59a9d9d1a5193ab0bcf0a031e5436c3",
+                "reference": "2b4ee41cc59a9d9d1a5193ab0bcf0a031e5436c3",
                 "shasum": ""
             },
             "require": {
@@ -355,9 +355,9 @@
             "description": "Micro Framework: Kernel Boot loader - component to provide plugin configuration",
             "support": {
                 "issues": "https://github.com/Micro-PHP/kernel-bootloader-configuration/issues",
-                "source": "https://github.com/Micro-PHP/kernel-bootloader-configuration/tree/v1.2"
+                "source": "https://github.com/Micro-PHP/kernel-bootloader-configuration/tree/v1.3"
             },
-            "time": "2022-11-25T19:58:38+00:00"
+            "time": "2022-11-25T20:24:50+00:00"
         },
         {
             "name": "micro/kernel-boot-dependency",
