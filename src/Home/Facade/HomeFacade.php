@@ -2,6 +2,7 @@
 
 namespace MicroCRM\Home\Facade;
 
+use Micro\Plugin\Twig\TwigFacadeInterface;
 use MicroCRM\Home\HomePluginConfiguration;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -9,9 +10,13 @@ use Symfony\Component\HttpFoundation\Response;
 class HomeFacade implements HomeFacadeInterface
 {
     /**
+     * @param TwigFacadeInterface $twigFacade
      * @param HomePluginConfiguration $pluginConfiguration
      */
-    public function __construct(private readonly HomePluginConfiguration $pluginConfiguration)
+    public function __construct(
+        private readonly TwigFacadeInterface $twigFacade,
+        private readonly HomePluginConfiguration $pluginConfiguration
+    )
     {
     }
 
@@ -20,6 +25,13 @@ class HomeFacade implements HomeFacadeInterface
      */
     public function handleHomeRequest(Request $request): Response
     {
-        return new Response('Hello, World ! ENV: ' . $this->pluginConfiguration->getEnv());
+        $result = $this->twigFacade->render('@HomePlugin/index.html.twig', [
+            'items' => [
+                'Message1',
+                'Message2'
+            ]
+        ]);
+
+        return new Response($result);
     }
 }

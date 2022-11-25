@@ -2,6 +2,7 @@
 
 namespace MicroCRM\Home\Controller;
 
+use Micro\Plugin\Twig\TwigFacadeInterface;
 use MicroCRM\Home\Facade\HomeFacadeInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
