@@ -318,16 +318,16 @@
         },
         {
             "name": "micro/kernel-boot-configuration",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Micro-PHP/kernel-bootloader-configuration.git",
-                "reference": "4727eae6d4fedd5d4b404617fd335443abb9d99a"
+                "reference": "c043ba4b569805f2d81c32704b28986d04fd9983"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Micro-PHP/kernel-bootloader-configuration/zipball/4727eae6d4fedd5d4b404617fd335443abb9d99a",
-                "reference": "4727eae6d4fedd5d4b404617fd335443abb9d99a",
+                "url": "https://api.github.com/repos/Micro-PHP/kernel-bootloader-configuration/zipball/c043ba4b569805f2d81c32704b28986d04fd9983",
+                "reference": "c043ba4b569805f2d81c32704b28986d04fd9983",
                 "shasum": ""
             },
             "require": {
@@ -355,9 +355,9 @@
             "description": "Micro Framework: Kernel Boot loader - component to provide plugin configuration",
             "support": {
                 "issues": "https://github.com/Micro-PHP/kernel-bootloader-configuration/issues",
-                "source": "https://github.com/Micro-PHP/kernel-bootloader-configuration/tree/v1.1"
+                "source": "https://github.com/Micro-PHP/kernel-bootloader-configuration/tree/v1.2"
             },
-            "time": "2022-11-25T16:26:10+00:00"
+            "time": "2022-11-25T19:58:38+00:00"
         },
         {
             "name": "micro/kernel-boot-dependency",
@@ -531,16 +531,16 @@
         },
         {
             "name": "micro/plugin-http",
-            "version": "1.0",
+            "version": "1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Micro-PHP/plugin-http.git",
-                "reference": "34b967325046e9529247e86fe6f6a5b33e87b1fb"
+                "reference": "277fcfb2d48c6725245e81069a280a8470140491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Micro-PHP/plugin-http/zipball/34b967325046e9529247e86fe6f6a5b33e87b1fb",
-                "reference": "34b967325046e9529247e86fe6f6a5b33e87b1fb",
+                "url": "https://api.github.com/repos/Micro-PHP/plugin-http/zipball/277fcfb2d48c6725245e81069a280a8470140491",
+                "reference": "277fcfb2d48c6725245e81069a280a8470140491",
                 "shasum": ""
             },
             "require": {
@@ -570,9 +570,9 @@
             "description": "Micro Framework: Provides a component for building MVC aplication based on HTTP(s) protocol",
             "support": {
                 "issues": "https://github.com/Micro-PHP/plugin-http/issues",
-                "source": "https://github.com/Micro-PHP/plugin-http/tree/v1.0"
+                "source": "https://github.com/Micro-PHP/plugin-http/tree/v1.1"
             },
-            "time": "2022-11-25T17:03:48+00:00"
+            "time": "2022-11-25T20:06:00+00:00"
         },
         {
             "name": "micro/plugin-locator",
@@ -5448,5 +5448,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }

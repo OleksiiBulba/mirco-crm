@@ -3,7 +3,14 @@
 declare(strict_types=1);
 
 return [
+    // Core plugins
+    Micro\Plugin\Locator\LocatorPlugin::class,
+    Micro\Plugin\Configuration\Helper\ConfigurationHelperPlugin::class,
     Micro\Plugin\Http\HttpPlugin::class,
     Micro\Plugin\Console\ConsolePlugin::class,
     Micro\Plugin\Logger\Monolog\MonologPlugin::class,
+    //
+
+    MicroCRM\Home\HomePlugin::class,
+
 ];

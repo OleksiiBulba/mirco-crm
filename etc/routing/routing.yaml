@@ -1,0 +1,4 @@
+routes:
+  crm_home_plugin:
+    format: yaml
+    resource: '@HomePlugin/Resource/routing/routing.yaml'
