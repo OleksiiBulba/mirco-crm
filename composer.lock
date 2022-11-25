@@ -531,16 +531,16 @@
         },
         {
             "name": "micro/plugin-http",
-            "version": "1.1",
+            "version": "1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Micro-PHP/plugin-http.git",
-                "reference": "277fcfb2d48c6725245e81069a280a8470140491"
+                "reference": "c471f68b763f9308281d582a7d36a33feaa0b765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Micro-PHP/plugin-http/zipball/277fcfb2d48c6725245e81069a280a8470140491",
-                "reference": "277fcfb2d48c6725245e81069a280a8470140491",
+                "url": "https://api.github.com/repos/Micro-PHP/plugin-http/zipball/c471f68b763f9308281d582a7d36a33feaa0b765",
+                "reference": "c471f68b763f9308281d582a7d36a33feaa0b765",
                 "shasum": ""
             },
             "require": {
@@ -570,9 +570,9 @@
             "description": "Micro Framework: Provides a component for building MVC aplication based on HTTP(s) protocol",
             "support": {
                 "issues": "https://github.com/Micro-PHP/plugin-http/issues",
-                "source": "https://github.com/Micro-PHP/plugin-http/tree/v1.1"
+                "source": "https://github.com/Micro-PHP/plugin-http/tree/v1.2"
             },
-            "time": "2022-11-25T20:06:00+00:00"
+            "time": "2022-11-25T20:12:36+00:00"
         },
         {
             "name": "micro/plugin-locator",
