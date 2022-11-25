@@ -1,0 +1,47 @@
+{
+    "name": "micro-crm/micro-crm",
+    "description": "Micro CRM",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Oleksii Bulba",
+            "email": "oleksii.bulba@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "micro/kernel-app": "^1",
+        "micro/plugin-console": "^1",
+        "micro/plugin-http": "^1",
+        "micro/plugin-logger-monolog": "^1",
+        "phpstan/phpstan-strict-rules": "^1.4",
+        "vlucas/phpdotenv": "^5.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.13",
+        "phpmd/phpmd": "^2.13",
+        "phpstan/phpstan": "^1.9",
+        "phpstan/phpstan-phpunit": "^1.2",
+        "phpunit/phpunit": "^9.5",
+        "symfony/var-dumper": "^6.1"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MicroCRM\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MicroCRM\\Tests\\": "tests/units"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    }
+}

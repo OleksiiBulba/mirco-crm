@@ -1,1 +1,5 @@
 .idea
+/vendor/
+*.local
+/.dc-running
+/var/
