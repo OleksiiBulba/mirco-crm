@@ -13,6 +13,7 @@
         "micro/kernel-app": "^1",
         "micro/plugin-console": "^1",
         "micro/plugin-http": "^1",
+        "micro/plugin-twig": "^0",
         "micro/plugin-logger-monolog": "^1",
         "phpstan/phpstan-strict-rules": "^1.4",
         "vlucas/phpdotenv": "^5.4"
