@@ -9,7 +9,7 @@ trait TwigTemplatePluginTrait
 {
     public function name(): string
     {
-        return 'Home';
+        return $this->getTwigNamespace();
     }
 
     public function getTwigTemplatePaths(): array
