@@ -3,3 +3,6 @@
 *.local
 /.dc-running
 /var/
+/node_modules/
+/public/build/
+/lib

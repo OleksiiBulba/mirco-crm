@@ -13,5 +13,5 @@ return [
     //
 
     MicroCRM\Home\HomePlugin::class,
-
+    OleksiiBulba\WebpackEncorePlugin\WebpackEncorePlugin::class,
 ];

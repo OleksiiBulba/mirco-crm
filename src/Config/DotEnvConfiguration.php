@@ -25,4 +25,8 @@ class DotEnvConfiguration extends DefaultApplicationConfiguration
 
         parent::__construct($_ENV);
     }
+
+    public function __debugInfo() {
+        return [];
+    }
 }

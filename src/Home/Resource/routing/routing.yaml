@@ -1,6 +1,6 @@
 routes:
   crm_home:
-    path: /abc
+    path: /home
     methods:
       - GET
     options:
