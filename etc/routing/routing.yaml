@@ -2,3 +2,7 @@ routes:
   crm_home_plugin:
     format: yaml
     resource: '@HomePlugin/Resource/routing/routing.yaml'
+  api_users_plugin:
+    format: yaml
+    prefix: /api
+    resource: '@UserPlugin/Resource/routing/routing.yaml'
