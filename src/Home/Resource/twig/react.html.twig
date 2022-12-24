@@ -3,11 +3,13 @@
 {% block title %}Hello world from React!{% endblock %}
 
 {% block javascripts %}
+    {{ parent() }}
     {{ encore_entry_script_tags('app', {'defer': true}) }}
 {% endblock %}
 
-{% block styles %}
-    {{ encore_entry_link_tags('styles') }}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ encore_entry_link_tags('app') }}
 {% endblock %}
 
 {% block body %}

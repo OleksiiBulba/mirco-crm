@@ -14,4 +14,5 @@ return [
 
     MicroCRM\Home\HomePlugin::class,
     OleksiiBulba\WebpackEncorePlugin\WebpackEncorePlugin::class,
+    MicroCRM\User\UserPlugin::class,
 ];

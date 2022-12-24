@@ -1,0 +1,8 @@
+routes:
+  api_users:
+    path: '/users'
+    methods:
+      - POST
+    options:
+      action: index
+      controller: 'MicroCRM\User\Controller\UserController'
