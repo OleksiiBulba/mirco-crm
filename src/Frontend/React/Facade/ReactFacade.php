@@ -3,29 +3,25 @@
 namespace MicroCRM\Frontend\React\Facade;
 
 use Micro\Plugin\Twig\TwigFacadeInterface;
-use MicroCRM\Frontend\React\ReactPluginConfiguration;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
+use MicroCRM\Frontend\React\ReactPluginConfigurationInterface;
 
 readonly class ReactFacade implements ReactFacadeInterface
 {
     /**
-     * @param TwigFacadeInterface      $twigFacade
-     * @param ReactPluginConfiguration $pluginConfiguration
+     * @param TwigFacadeInterface               $twigFacade
+     * @param ReactPluginConfigurationInterface $pluginConfiguration
      */
     public function __construct(
         private TwigFacadeInterface $twigFacade,
-        private ReactPluginConfiguration $pluginConfiguration
+        private ReactPluginConfigurationInterface $pluginConfiguration
     ) {
     }
 
-    /**
-     * {@inheritDoc}
-     */
-    public function handleHomeRequest(Request $request): Response
+    public function renderReact(): string
     {
-        return new Response(
-            $this->twigFacade->render('@ReactPlugin/index.html.twig')
+        return $this->twigFacade->render(
+            $this->pluginConfiguration->getTemplate(),
+            ['env' => $this->pluginConfiguration->getEnv()]
         );
     }
 }
