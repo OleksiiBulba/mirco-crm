@@ -1,0 +1,15 @@
+routes:
+    security_auth_code:
+        path: /auth/code
+        methods:
+            - POST
+        options:
+            action: processCodeRequest
+            controller: 'MicroCRM\Frontend\Security\Controller\AuthorizationController'
+    security_token_refresh:
+        path: token/refresh
+        methods:
+            - POST
+        options:
+            action: refreshToken
+            controller: 'MicroCRM\Frontend\Security\Controller\AuthorizationController'

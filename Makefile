@@ -22,7 +22,7 @@ build-front: ## Make front
 	@$(YARN) install
 	@$(YARN) build
 
-yarn:
+yarn: ## Run yarn, pass the parameter "c=" to run a given command, example: make yarn c='add history'
 	@$(eval c ?=)
 	@$(YARN) $(c)
 
@@ -39,6 +39,9 @@ start: up ## Alias for `make up`
 
 down: ## Shutdown all containers
 	@$(DOCKER_COMP) down --remove-orphans
+
+restart: ## restart all containers
+restart: down up
 
 logs: ## Listen to logs in php container
 	@$(DOCKER_COMP) logs --tail=0 --follow
