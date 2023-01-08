@@ -24,7 +24,7 @@ class ReactPlugin implements DependencyProviderInterface, ConfigurableInterface,
     private readonly TwigFacadeInterface $twigFacade;
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function provideDependencies(Container $container): void
     {

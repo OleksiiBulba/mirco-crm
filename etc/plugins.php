@@ -19,4 +19,7 @@ return [
     MicroCRM\Client\Security\SecurityClientPlugin::class,
     Micro\Plugin\Security\SecurityPlugin::class,
     Micro\Plugin\OAuth2\Client\OAuth2ClientPlugin::class,
+    MicroCRM\Frontend\ExceptionsHandler\ExceptionsHandlerPlugin::class,
+    Micro\Plugin\OAuth2\Client\Keycloak\OAuth2KeycloakProviderPlugin::class,
+    MicroCRM\Common\Serializer\SerializerPlugin::class,
 ];

@@ -14,8 +14,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 class AuthorizationController
 {
-    const MSG_PARAM_MISSING_OR_INVALID = 'The "%s" parameter is missing or invalid in the request.';
-
     private SecurityClientInterface $securityClient;
 
     public function __construct(SecurityClientInterface $securityClient)
@@ -70,6 +68,8 @@ class AuthorizationController
      */
     protected function throwInvalidParameterException(string $parameter): void
     {
-        throw new HttpBadRequestException(sprintf(AuthorizationController::MSG_PARAM_MISSING_OR_INVALID, $parameter));
+        throw new HttpBadRequestException(
+            sprintf('The "%s" parameter is missing or invalid in the request.', $parameter)
+        );
     }
 }

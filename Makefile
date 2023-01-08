@@ -57,6 +57,6 @@ vendor: ## composer install dependencies
 vendor: c=install --prefer-dist --no-dev --no-progress --no-scripts --no-interaction
 vendor: composer
 
-micro: ## List all Micro commands or pass the parameter "c=" to run a given command, example: make sf c=about
+micro: ## List all Micro commands or pass the parameter "c=" to run a given command, example: make micro c=about
 	@$(eval c ?=)
 	@$(MICRO_BASH) $(c)

@@ -6,13 +6,14 @@ namespace MicroCRM\Frontend\Common\ResponseTransformer;
 
 use Micro\Plugin\Http\Handler\Response\ResponseHandlerContextInterface;
 use Micro\Plugin\Http\Handler\Response\ResponseHandlerInterface;
+use MicroCRM\Common\Serializer\Facade\SerializerFacadeInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 
-class ResponseTransformerHandler implements ResponseHandlerInterface
+readonly class ResponseTransformerHandler implements ResponseHandlerInterface
 {
-    public function __construct(SerializerFacadeInterface $serializerFacade)
+    public function __construct(private SerializerFacadeInterface $serializerFacade)
     {
-        $this->serializerFacade = $serializerFacade;
     }
 
     /**
@@ -20,10 +21,13 @@ class ResponseTransformerHandler implements ResponseHandlerInterface
      */
     public function handle(ResponseHandlerContextInterface $responseHandlerContext): void
     {
-        $response = $responseHandlerContext->getResponse();
-        if ($response instanceof Response) {
+        $responseData = $responseHandlerContext->getResponse();
+        if ($responseData instanceof Response) {
             return;
         }
-        $response->setContent($response->getContent() . ' transformed');
+
+        $response = new JsonResponse($this->serializerFacade->normalize($responseData, ''));
+
+        $responseHandlerContext->setResponse($response);
     }
 }
