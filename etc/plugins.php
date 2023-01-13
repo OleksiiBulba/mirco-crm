@@ -17,7 +17,7 @@ return [
     Frontend\Security\SecurityPlugin::class,
     Frontend\React\ReactPlugin::class,
     Frontend\ExceptionsHandler\ExceptionsHandlerPlugin::class,
-    // Frontend\User\UserFrontendPlugin::class,
+    Frontend\User\UserFrontendPlugin::class,
 
     MicroCRM\Client\Security\SecurityClientPlugin::class,
     Micro\Plugin\Security\SecurityPlugin::class,
